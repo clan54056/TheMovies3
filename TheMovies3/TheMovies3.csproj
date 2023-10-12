@@ -58,6 +58,8 @@
     <Compile Include="Components\MovieDetailsForm.xaml.cs">
       <DependentUpon>MovieDetailsForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AddMovieViewModel.cs" />
+    <Compile Include="ViewModels\MovieDetailsFormViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\AddMovieView.xaml.cs">
       <DependentUpon>AddMovieView.xaml</DependentUpon>
@@ -84,8 +86,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -111,6 +111,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TheMovies.Domain\TheMovies.Domain.csproj">
+      <Project>{1379a577-d527-4366-89ad-969380b33208}</Project>
+      <Name>TheMovies.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
